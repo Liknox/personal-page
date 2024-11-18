@@ -1,7 +1,7 @@
-import { RouteEnum } from './enum/routes';
+import { RouteEnum } from "./enum/routes"
 
 const routesPaths = {
-  [RouteEnum.home]: '/',
-} as const;
+   [RouteEnum.home]: "/",
+} as const
 
-export { routesPaths };
+export { routesPaths }

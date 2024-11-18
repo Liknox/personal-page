@@ -1,2 +1,2 @@
-export { routesPaths } from './config';
-export { routeTree } from './routeTree.gen';
+export { routesPaths } from "./config"
+export { routeTree } from "./routeTree.gen"

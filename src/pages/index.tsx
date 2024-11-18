@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router"
 import styled from "styled-components"
 
 const Home = () => {
-	return <p>Home</p>
+   return <p>Home</p>
 }
 
 export const Route = createFileRoute(routesPaths.home)({
-	component: () => <Home />,
+   component: () => <Home />,
 })

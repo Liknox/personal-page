@@ -1,6 +1,5 @@
 enum RouteEnum {
-   home = 'home',
- }
- 
- export { RouteEnum };
- 
+   home = "home",
+}
+
+export { RouteEnum }
