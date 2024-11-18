@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => {
 	}
 
 	return {
-		plugins: [tsconfigPaths(), react(), TanStackRouterVite()],
+		plugins: [tsconfigPaths(), react()],
 		base: "/",
 		publicDir: "./public",
 		build: buildOptions,
