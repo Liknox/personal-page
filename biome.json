@@ -7,7 +7,6 @@
 		"enabled": true,
 		"lineWidth": 120,
 		"indentStyle": "space",
-
 		"formatWithErrors": false,
 		"indentWidth": 3,
 		"lineEnding": "lf"
@@ -29,7 +28,6 @@
 			"jsxQuoteStyle": "double",
 			"quoteStyle": "double",
 			"semicolons": "asNeeded",
-			"trailingComma": "es5",
 			"quoteProperties": "asNeeded",
 			"bracketSpacing": true,
 			"bracketSameLine": true
