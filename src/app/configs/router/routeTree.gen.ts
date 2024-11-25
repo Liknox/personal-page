@@ -18,6 +18,7 @@ import { Route as IndexImport } from "./../../../pages/index"
 
 const R404Route = R404Import.update({
    id: "/__404",
+   path: "/__404",
    getParentRoute: () => rootRoute,
    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
 } as any)
