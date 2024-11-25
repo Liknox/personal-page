@@ -1,7 +1,13 @@
 import { Router } from "./providers/router"
+import { GlobalStyles } from "./styles/globalStyles"
 
 const App = () => {
-   return <Router />
+	return (
+		<>
+			<GlobalStyles />
+			<Router />
+		</>
+	)
 }
 
 export { App }
