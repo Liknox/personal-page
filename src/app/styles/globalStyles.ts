@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
 	:root {
@@ -112,6 +112,6 @@ const GlobalStyles = createGlobalStyle`
 			--input-border-hover-color: #424242;
 		}
 	}
-`;
+`
 
-export { GlobalStyles };
+export { GlobalStyles }
