@@ -1,5 +1,6 @@
 import { routeTree } from "@app/configs/router"
 import { RouterProvider, createRouter } from "@tanstack/react-router"
+import { Loader } from "@ui/Loader"
 import { Suspense } from "react"
 
 const router = createRouter({
@@ -18,7 +19,7 @@ declare module "@tanstack/react-router" {
 }
 
 const Router = () => (
-   <Suspense fallback={<p>Loading...</p>}>
+   <Suspense fallback={<Loader />}>
       <RouterProvider router={router} />
    </Suspense>
 )
