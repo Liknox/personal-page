@@ -5,6 +5,7 @@
 	},
 	"formatter": {
 		"enabled": true,
+		"ignore": ["node_modules", "build", "src/ignoredFile.js", "**/ignoredFolder/**"],
 		"lineWidth": 120,
 		"indentStyle": "space",
 		"formatWithErrors": false,
