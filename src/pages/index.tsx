@@ -35,5 +35,5 @@ const Home = () => {
 }
 
 export const Route = createFileRoute(routesPaths.home)({
-	component: () => <Home />,
+   component: () => <Home />,
 })
