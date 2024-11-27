@@ -27,12 +27,11 @@ const TopContainer = styled.div`
 `
 
 const Home = () => {
-	return (
-		<Container>
-			<TopContainer>
-			</TopContainer>
-		</Container>
-	)
+   return (
+      <Container>
+         <TopContainer></TopContainer>
+      </Container>
+   )
 }
 
 export const Route = createFileRoute(routesPaths.home)({
