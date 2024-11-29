@@ -1,4 +1,5 @@
 import { routesPaths } from "@app/configs/router"
+import { useInitialAnimation } from "@app/context/initialAnimation"
 import { createFileRoute } from "@tanstack/react-router"
 import styled from "styled-components"
 
@@ -27,9 +28,13 @@ const TopContainer = styled.div`
 `
 
 const Home = () => {
+   const { isOver } = useInitialAnimation()
+   console.log(isOver)
+
    return (
       <Container>
-         <TopContainer></TopContainer>
+         <TopContainer>123</TopContainer>
+         123
       </Container>
    )
 }
