@@ -5,6 +5,21 @@
 	},
 	"formatter": {
 		"enabled": true,
+		"ignore": [
+			".cache",
+			".temp",
+			"build",
+			"dist",
+			"*.log",
+			".env",
+			".env.dev",
+			".env.local",
+			".idea/",
+			".vscode/",
+			"node_modules",
+			"src/ignoredFile.js",
+			"**/ignoredFolder/**"
+		],
 		"lineWidth": 120,
 		"indentStyle": "space",
 		"formatWithErrors": false,
