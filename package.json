@@ -7,7 +7,7 @@
 		"dev": "vite --open --config ./configs/build/vite.config.ts --port 3000",
 		"build": "tsc && vite build --config ./configs/build/vite.config.ts",
 		"preview": "vite preview --config ./configs/build/vite.config.ts",
-		"lint": "biome check --write ./src",
+		"lint": "biome check ./src",
 		"format": "biome format ./src --write",
 		"prepare": "husky"
 	},

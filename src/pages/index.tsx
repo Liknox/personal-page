@@ -34,7 +34,6 @@ const Home = () => {
    return (
       <Container>
          <TopContainer>123</TopContainer>
-         123
       </Container>
    )
 }
