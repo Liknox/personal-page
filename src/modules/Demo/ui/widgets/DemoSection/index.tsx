@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { useMemo, useState } from "react"
 import styled from "styled-components"
+import { Content } from "./Content"
 
 const Container = styled(motion.div)`
 	position: relative;
@@ -71,6 +72,7 @@ const DemoSection = () => {
    return (
       <Container onMouseMove={updateCursorPosition} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
          <BackgroundCircle {...backgroundCircleProps} />
+         <Content isHovered={isHovered} />
       </Container>
    )
 }
