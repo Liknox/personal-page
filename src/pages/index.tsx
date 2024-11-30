@@ -1,5 +1,6 @@
 import { routesPaths } from "@app/configs/router"
 import { useInitialAnimation } from "@app/context/initialAnimation"
+import { ContactList } from "@modules/Contact/ui"
 import { createFileRoute } from "@tanstack/react-router"
 import styled from "styled-components"
 
@@ -34,6 +35,7 @@ const Home = () => {
    return (
       <Container>
          <TopContainer>123</TopContainer>
+         <ContactList />
       </Container>
    )
 }
