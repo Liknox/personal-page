@@ -46,35 +46,35 @@ const BackgroundCircle = styled(motion.div)`
 `
 
 const DemoSection = () => {
-	const [isHovered, setIsHovered] = useState(false)
-	const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
+   const [isHovered, setIsHovered] = useState(false)
+   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
 
-	const handleHoverStart = () => setIsHovered(true)
-	const handleHoverEnd = () => setIsHovered(false)
+   const handleHoverStart = () => setIsHovered(true)
+   const handleHoverEnd = () => setIsHovered(false)
 
-	const backgroundCircleProps = useMemo(
-		() => ({
-			style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
-			animate: { opacity: isHovered ? 1 : 0 },
-			initial: { opacity: 0 },
-			transition: { duration: 0.1 },
-		}),
-		[cursorPosition, isHovered]
-	)
+   const backgroundCircleProps = useMemo(
+      () => ({
+         style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
+         animate: { opacity: isHovered ? 1 : 0 },
+         initial: { opacity: 0 },
+         transition: { duration: 0.1 },
+      }),
+      [cursorPosition, isHovered],
+   )
 
-	const updateCursorPosition = (e: MouseEvent<HTMLDivElement>) => {
-		const rect = e.currentTarget.getBoundingClientRect()
+   const updateCursorPosition = (e: MouseEvent<HTMLDivElement>) => {
+      const rect = e.currentTarget.getBoundingClientRect()
 
-		const { clientX, clientY } = e
-		setCursorPosition({ x: clientX - rect.left, y: clientY - rect.top })
-	}
+      const { clientX, clientY } = e
+      setCursorPosition({ x: clientX - rect.left, y: clientY - rect.top })
+   }
 
-	return (
-		<Container onMouseMove={updateCursorPosition} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
-			<BackgroundCircle {...backgroundCircleProps} />
-			<Content isHovered={isHovered} />
-		</Container>
-	)
+   return (
+      <Container onMouseMove={updateCursorPosition} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
+         <BackgroundCircle {...backgroundCircleProps} />
+         <Content isHovered={isHovered} />
+      </Container>
+   )
 }
 
 export { DemoSection }

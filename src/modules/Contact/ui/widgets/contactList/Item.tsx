@@ -97,118 +97,118 @@ const Index = styled(motion.span)`
 `
 
 const Item = ({ displayName, displayIndex, url, icon: Icon }: Props, index: number) => {
-	const { isOver: isInitialAnimationOver } = useInitialAnimation()
-	const [isHovered, setIsHovered] = useState(false)
-	const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
-	const [initialLoad, setInitialLoad] = useState(true)
+   const { isOver: isInitialAnimationOver } = useInitialAnimation()
+   const [isHovered, setIsHovered] = useState(false)
+   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
+   const [initialLoad, setInitialLoad] = useState(true)
 
-	const handleOpen = () => window.open(url, "_blank")
-	const handleHoverStart = () => setIsHovered(true)
-	const handleHoverEnd = () => setIsHovered(false)
+   const handleOpen = () => window.open(url, "_blank")
+   const handleHoverStart = () => setIsHovered(true)
+   const handleHoverEnd = () => setIsHovered(false)
 
-	const updateCursorPosition = (e: MouseEvent<HTMLDivElement>) => {
-		const rect = e.currentTarget.getBoundingClientRect()
+   const updateCursorPosition = (e: MouseEvent<HTMLDivElement>) => {
+      const rect = e.currentTarget.getBoundingClientRect()
 
-		const { clientX, clientY } = e
-		setCursorPosition({ x: clientX - rect.left, y: clientY - rect.top })
-	}
+      const { clientX, clientY } = e
+      setCursorPosition({ x: clientX - rect.left, y: clientY - rect.top })
+   }
 
-	const indexProps = useMemo(
-		() => ({
-			animate: {
-				y: isInitialAnimationOver ? 0 : -40,
-				opacity: isHovered ? 1 : 0.5,
-			},
-			initial: {
-				y: -40,
-				opacity: 0,
-			},
-			transition: {
-				type: "spring",
-				stiffness: 500,
-				damping: 30,
-				delay: initialLoad ? index * 0.2 + 0.1 : 0,
-			},
-		}),
-		[isInitialAnimationOver, isHovered, index, initialLoad]
-	)
+   const indexProps = useMemo(
+      () => ({
+         animate: {
+            y: isInitialAnimationOver ? 0 : -40,
+            opacity: isHovered ? 1 : 0.5,
+         },
+         initial: {
+            y: -40,
+            opacity: 0,
+         },
+         transition: {
+            type: "spring",
+            stiffness: 500,
+            damping: 30,
+            delay: initialLoad ? index * 0.2 + 0.1 : 0,
+         },
+      }),
+      [isInitialAnimationOver, isHovered, index, initialLoad],
+   )
 
-	const nameProps = useMemo(
-		() => ({
-			animate: {
-				y: isInitialAnimationOver ? (isHovered ? -10 : 0) : 40,
-				opacity: isHovered ? 1 : 0.5,
-			},
-			initial: {
-				y: 40,
-				opacity: 0,
-			},
-			transition: {
-				type: "spring",
-				stiffness: 500,
-				damping: 30,
-				delay: initialLoad ? index * 0.2 + 0.2 : 0,
-			},
-		}),
-		[isInitialAnimationOver, isHovered, index, initialLoad]
-	)
+   const nameProps = useMemo(
+      () => ({
+         animate: {
+            y: isInitialAnimationOver ? (isHovered ? -10 : 0) : 40,
+            opacity: isHovered ? 1 : 0.5,
+         },
+         initial: {
+            y: 40,
+            opacity: 0,
+         },
+         transition: {
+            type: "spring",
+            stiffness: 500,
+            damping: 30,
+            delay: initialLoad ? index * 0.2 + 0.2 : 0,
+         },
+      }),
+      [isInitialAnimationOver, isHovered, index, initialLoad],
+   )
 
-	const arrowProps = useMemo(
-		() => ({
-			animate: {
-				y: isInitialAnimationOver ? (isHovered ? -10 : 0) : 40,
-				rotate: isHovered ? -45 : 0,
-				opacity: isHovered ? 1 : 0.5,
-			},
-			initial: { y: 40, rotate: 0, opacity: 0 },
-			transition: {
-				type: "spring",
-				stiffness: 500,
-				damping: 30,
-				delay: initialLoad ? index * 0.2 + 0.3 : 0,
-			},
-		}),
-		[isHovered, isInitialAnimationOver, index, initialLoad]
-	)
+   const arrowProps = useMemo(
+      () => ({
+         animate: {
+            y: isInitialAnimationOver ? (isHovered ? -10 : 0) : 40,
+            rotate: isHovered ? -45 : 0,
+            opacity: isHovered ? 1 : 0.5,
+         },
+         initial: { y: 40, rotate: 0, opacity: 0 },
+         transition: {
+            type: "spring",
+            stiffness: 500,
+            damping: 30,
+            delay: initialLoad ? index * 0.2 + 0.3 : 0,
+         },
+      }),
+      [isHovered, isInitialAnimationOver, index, initialLoad],
+   )
 
-	const backgroundCircleProps = useMemo(
-		() => ({
-			style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
-			animate: { opacity: isHovered ? 1 : 0 },
-			initial: { opacity: 0 },
-			transition: {
-				type: "spring",
-				stiffness: 500,
-				damping: 30,
-			},
-		}),
-		[cursorPosition, isHovered]
-	)
+   const backgroundCircleProps = useMemo(
+      () => ({
+         style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
+         animate: { opacity: isHovered ? 1 : 0 },
+         initial: { opacity: 0 },
+         transition: {
+            type: "spring",
+            stiffness: 500,
+            damping: 30,
+         },
+      }),
+      [cursorPosition, isHovered],
+   )
 
-	useEffect(() => {
-		setInitialLoad(false)
-	}, [])
+   useEffect(() => {
+      setInitialLoad(false)
+   }, [])
 
-	return (
-		<Container
-			onMouseMove={updateCursorPosition}
-			onHoverStart={handleHoverStart}
-			onHoverEnd={handleHoverEnd}
-			onClick={handleOpen}>
-			<BackgroundCircle {...backgroundCircleProps} />
-			<IndexContainer>
-				<Index {...indexProps}>{displayIndex}</Index>
-			</IndexContainer>
-			<NameContainer>
-				<Name {...nameProps}>
-					<Icon /> {displayName}
-				</Name>
-				<Arrow {...arrowProps}>
-					<ArrowRightOutlined />
-				</Arrow>
-			</NameContainer>
-		</Container>
-	)
+   return (
+      <Container
+         onMouseMove={updateCursorPosition}
+         onHoverStart={handleHoverStart}
+         onHoverEnd={handleHoverEnd}
+         onClick={handleOpen}>
+         <BackgroundCircle {...backgroundCircleProps} />
+         <IndexContainer>
+            <Index {...indexProps}>{displayIndex}</Index>
+         </IndexContainer>
+         <NameContainer>
+            <Name {...nameProps}>
+               <Icon /> {displayName}
+            </Name>
+            <Arrow {...arrowProps}>
+               <ArrowRightOutlined />
+            </Arrow>
+         </NameContainer>
+      </Container>
+   )
 }
 
 export { Item }
