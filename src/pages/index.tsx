@@ -30,16 +30,16 @@ const TopContainer = styled.div`
 `
 
 const Home = () => {
-	return (
-		<Container>
-			<TopContainer>
-				<DemoSection />
-			</TopContainer>
-			<ContactList />
-		</Container>
-	)
+   return (
+      <Container>
+         <TopContainer>
+            <DemoSection />
+         </TopContainer>
+         <ContactList />
+      </Container>
+   )
 }
 
 export const Route = createFileRoute(routesPaths.home)({
-	component: () => <Home />,
+   component: () => <Home />,
 })
