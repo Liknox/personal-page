@@ -29,9 +29,6 @@ const TopContainer = styled.div`
 `
 
 const Home = () => {
-   const { isOver } = useInitialAnimation()
-   console.log(isOver)
-
    return (
       <Container>
          <TopContainer>123</TopContainer>
