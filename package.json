@@ -1,38 +1,38 @@
 {
-	"name": "personal-page",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite --open --config ./configs/build/vite.config.ts --port 3000 --host",
-		"build": "tsc && vite build --config ./configs/build/vite.config.ts",
-		"preview": "vite preview --config ./configs/build/vite.config.ts",
-		"lint": "biome check ./src",
-		"format": "biome format ./src --write",
-		"prepare": "husky"
-	},
-	"dependencies": {
-		"@tanstack/react-router": "^1.82.0",
-		"@tanstack/router-vite-plugin": "^1.81.9",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"styled-components": "^6.1.13"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@types/node": "^22.9.0",
-		"@types/react": "^18.2.56",
-		"@types/react-dom": "^18.2.19",
-		"@typescript-eslint/eslint-plugin": "^7.0.2",
-		"@typescript-eslint/parser": "^7.0.2",
-		"@vitejs/plugin-react": "^4.2.1",
-		"eslint": "^8.56.0",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-react-refresh": "^0.4.5",
-		"husky": "^9.1.7",
-		"lint-staged": "^15.2.10",
-		"typescript": "^5.2.2",
-		"vite": "^5.1.4",
-		"vite-tsconfig-paths": "^5.1.2"
-	}
+   "name": "personal-page",
+   "private": true,
+   "version": "0.0.0",
+   "type": "module",
+   "scripts": {
+      "dev": "vite --open --config ./configs/build/vite.config.ts --port 3000 --host",
+      "build": "tsc && vite build --config ./configs/build/vite.config.ts",
+      "preview": "vite preview --config ./configs/build/vite.config.ts",
+      "lint": "biome check ./src",
+      "format": "biome format ./src --write",
+      "prepare": "husky"
+   },
+   "dependencies": {
+      "@tanstack/react-router": "^1.82.0",
+      "@tanstack/router-vite-plugin": "^1.81.9",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "styled-components": "^6.1.13"
+   },
+   "devDependencies": {
+      "@biomejs/biome": "^1.9.4",
+      "@types/node": "^22.9.0",
+      "@types/react": "^18.2.56",
+      "@types/react-dom": "^18.2.19",
+      "@typescript-eslint/eslint-plugin": "^7.0.2",
+      "@typescript-eslint/parser": "^7.0.2",
+      "@vitejs/plugin-react": "^4.2.1",
+      "eslint": "^8.56.0",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "eslint-plugin-react-refresh": "^0.4.5",
+      "husky": "^9.1.7",
+      "lint-staged": "^15.2.10",
+      "typescript": "^5.2.2",
+      "vite": "^5.1.4",
+      "vite-tsconfig-paths": "^5.1.2"
+   }
 }
