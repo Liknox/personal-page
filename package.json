@@ -9,7 +9,7 @@
 		"preview": "vite preview --config ./configs/build/vite.config.ts",
 		"lint": "biome check ./src",
 		"format": "biome format ./src --write",
-		"prepare": "husky"
+		"prepare": "husky || true"
 	},
 	"dependencies": {
 		"@tanstack/react-router": "^1.82.0",
