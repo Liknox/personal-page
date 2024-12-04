@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useMemo, useState } from "react"
 import styled from "styled-components"
 
 const Container = styled(motion.div)`
@@ -26,8 +27,51 @@ const Container = styled(motion.div)`
 	}
 `
 
+const BackgroundCircle = styled(motion.div)`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: radial-gradient(
+		circle,
+		color-mix(in srgb, var(--primary-color) 40%, transparent 100%),
+		color-mix(in srgb, var(--primary-dark-color) 20%, transparent 100%)
+	);
+	filter: blur(50px);
+	pointer-events: none;
+`
+
 const InfoSection = () => {
-   return <Container></Container>
+   const [isHovered, setIsHovered] = useState(false)
+   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
+
+   const handleHoverStart = () => setIsHovered(true)
+   const handleHoverEnd = () => setIsHovered(false)
+
+   const backgroundCircleProps = useMemo(
+      () => ({
+         style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
+         animate: { opacity: isHovered ? 1 : 0 },
+         initial: { opacity: 0 },
+         transition: { duration: 0.1 },
+      }),
+      [cursorPosition, isHovered],
+   )
+
+   const updateCursorPosition = e => {
+      const rect = e.currentTarget.getBoundingClientRect()
+
+      const { clientX, clientY } = e
+      setCursorPosition({ x: clientX - rect.left, y: clientY - rect.top })
+   }
+
+   return (
+      <Container onMouseMove={updateCursorPosition} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
+         <BackgroundCircle {...backgroundCircleProps} />
+      </Container>
+   )
 }
 
 export { InfoSection }
