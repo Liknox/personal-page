@@ -27,7 +27,7 @@ const Container = styled(motion.div)`
 `
 
 const InfoSection = () => {
-	return <Container></Container>
+   return <Container></Container>
 }
 
 export { InfoSection }
