@@ -44,7 +44,7 @@ const WelcomeSection = ({ isHovered }: Props) => {
             Craft perfect business solutions,
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.4}>
-            Burn my eyes out with colorful letters in the IDE.
+            Burn my eyes out with colorful letters in the IDE
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.5}>
             Let's work together!
