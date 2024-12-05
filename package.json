@@ -12,6 +12,7 @@
 		"prepare": "husky || true"
 	},
 	"dependencies": {
+		"@ant-design/icons": "^5.5.2",
 		"@tanstack/react-router": "^1.82.0",
 		"@tanstack/router-vite-plugin": "^1.81.9",
 		"framer-motion": "^11.13.1",

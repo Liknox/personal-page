@@ -1,6 +1,9 @@
+import { useSelectedSection } from "@app/context/selectedSection"
+import { sectionsConfig } from "@modules/Info/configs/sections"
 import { motion } from "framer-motion"
 import { useMemo, useState } from "react"
 import styled from "styled-components"
+import { Selector } from "./Selector"
 
 const Container = styled(motion.div)`
 	position: relative;
@@ -27,6 +30,23 @@ const Container = styled(motion.div)`
 	}
 `
 
+const SectionContainer = styled.div`
+	padding: var(--spacing-m);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-grow: 1;
+	width: 100%;
+
+	@media (max-width: 768px) {
+		padding: 0;
+		padding-bottom: var(--spacing-s);
+	}
+`
+
 const BackgroundCircle = styled(motion.div)`
 	position: absolute;
 	top: 0;
@@ -44,6 +64,7 @@ const BackgroundCircle = styled(motion.div)`
 `
 
 const InfoSection = () => {
+   const { section } = useSelectedSection()
    const [isHovered, setIsHovered] = useState(false)
    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
 
@@ -67,8 +88,17 @@ const InfoSection = () => {
       setCursorPosition({ x: clientX - rect.left, y: clientY - rect.top })
    }
 
+   const Component = useMemo(() => {
+      // console.log(sectionsConfig.find(({ key }) => key === section)?.key)
+      return sectionsConfig.find(({ key }) => key === section)?.component || (() => null)
+   }, [section])
+
    return (
       <Container onMouseMove={updateCursorPosition} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
+         <SectionContainer>
+            <Component isHovered={isHovered} />
+         </SectionContainer>
+         <Selector isHovered={isHovered} />
          <BackgroundCircle {...backgroundCircleProps} />
       </Container>
    )
