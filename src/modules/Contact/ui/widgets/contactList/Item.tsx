@@ -2,7 +2,7 @@ import { ArrowRightOutlined } from "@ant-design/icons"
 import { useInitialAnimation } from "@app/context/initialAnimation"
 import type { ContactItemConfigType as Props } from "@modules/Contact/configs"
 import { motion } from "framer-motion"
-import { MouseEvent, useEffect, useMemo, useState } from "react"
+import { type MouseEvent, useEffect, useMemo, useState } from "react"
 import styled from "styled-components"
 
 const Container = styled(motion.div)`

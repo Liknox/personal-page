@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { MouseEvent, useMemo, useState } from "react"
+import { type MouseEvent, useMemo, useState } from "react"
 import styled from "styled-components"
 import { Content } from "./Content"
 

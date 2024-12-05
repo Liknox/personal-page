@@ -1,7 +1,7 @@
 import { useSelectedSection } from "@app/context/selectedSection"
 import { sectionsConfig } from "@modules/Info/configs/sections"
 import { motion } from "framer-motion"
-import { MouseEvent, useMemo, useState } from "react"
+import { type MouseEvent, useMemo, useState } from "react"
 import styled from "styled-components"
 import { Selector } from "./Selector"
 
