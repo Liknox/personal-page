@@ -1,8 +1,8 @@
-import styled from "styled-components"
-import { motion } from "framer-motion"
 import { useInitialAnimation } from "@app/context/initialAnimation"
-import { useEffect, useMemo, useState } from "react"
 import { backgroundText } from "@modules/Demo/configs/backgroundText"
+import { motion } from "framer-motion"
+import { useEffect, useMemo, useState } from "react"
+import styled from "styled-components"
 
 const Name = styled.h1`
 	margin-top: 3.5rem;

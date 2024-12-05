@@ -1,9 +1,9 @@
-import { sectionsConfig } from "@modules/Info/configs/sections"
-import { motion } from "framer-motion"
-import styled from "styled-components"
 import { useSelectedSection } from "@app/context/selectedSection"
 import type { SectionEnum } from "@app/context/selectedSection"
+import { sectionsConfig } from "@modules/Info/configs/sections"
+import { motion } from "framer-motion"
 import { useEffect, useMemo, useState } from "react"
+import styled from "styled-components"
 
 const options = sectionsConfig.map(section => {
    return {
