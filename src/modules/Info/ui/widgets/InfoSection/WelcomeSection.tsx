@@ -41,9 +41,12 @@ const WelcomeSection = ({ isHovered }: Props) => {
             I'm Nazar Koval. A Software Engineer,
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.3}>
-            burn my eyes out with colorful letters in the IDE.
+            Craft perfect business solutions,
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.4}>
+            Burn my eyes out with colorful letters in the IDE.
+         </AnimatedText>
+         <AnimatedText isHovered={isHovered} delay={0.5}>
             Let's work together!
          </AnimatedText>
       </>
