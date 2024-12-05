@@ -8,7 +8,7 @@ const ExperienceSection = ({ isHovered }: Props) => {
    return (
       <>
          <AnimatedText isHovered={isHovered} delay={0} bullet>
-            Setting up and leading full stack projects from idea stage to production
+            Setting up and developing projects from idea stage to production
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.1} bullet>
             Work Experience in a High Growth AI Startup reporting directly to the CE with a hybrid workflow

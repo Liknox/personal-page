@@ -64,44 +64,44 @@ const BackgroundCircle = styled(motion.div)`
 `
 
 const InfoSection = () => {
-	const { section } = useSelectedSection()
-	const [isHovered, setIsHovered] = useState(false)
-	const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
+   const { section } = useSelectedSection()
+   const [isHovered, setIsHovered] = useState(false)
+   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
 
-	const handleHoverStart = () => setIsHovered(true)
-	const handleHoverEnd = () => setIsHovered(false)
+   const handleHoverStart = () => setIsHovered(true)
+   const handleHoverEnd = () => setIsHovered(false)
 
-	const backgroundCircleProps = useMemo(
-		() => ({
-			style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
-			animate: { opacity: isHovered ? 1 : 0 },
-			initial: { opacity: 0 },
-			transition: { duration: 0.1 },
-		}),
-		[cursorPosition, isHovered]
-	)
+   const backgroundCircleProps = useMemo(
+      () => ({
+         style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
+         animate: { opacity: isHovered ? 1 : 0 },
+         initial: { opacity: 0 },
+         transition: { duration: 0.1 },
+      }),
+      [cursorPosition, isHovered],
+   )
 
-	const updateCursorPosition = (e: MouseEvent<HTMLDivElement>) => {
-		const rect = e.currentTarget.getBoundingClientRect()
+   const updateCursorPosition = (e: MouseEvent<HTMLDivElement>) => {
+      const rect = e.currentTarget.getBoundingClientRect()
 
-		const { clientX, clientY } = e
-		setCursorPosition({ x: clientX - rect.left, y: clientY - rect.top })
-	}
+      const { clientX, clientY } = e
+      setCursorPosition({ x: clientX - rect.left, y: clientY - rect.top })
+   }
 
-	const Component = useMemo(() => {
-		// console.log(sectionsConfig.find(({ key }) => key === section)?.key)
-		return sectionsConfig.find(({ key }) => key === section)?.component || (() => null)
-	}, [section])
+   const Component = useMemo(() => {
+      // console.log(sectionsConfig.find(({ key }) => key === section)?.key)
+      return sectionsConfig.find(({ key }) => key === section)?.component || (() => null)
+   }, [section])
 
-	return (
-		<Container onMouseMove={updateCursorPosition} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
-			<SectionContainer>
-				<Component isHovered={isHovered} />
-			</SectionContainer>
-			<Selector isHovered={isHovered} />
-			<BackgroundCircle {...backgroundCircleProps} />
-		</Container>
-	)
+   return (
+      <Container onMouseMove={updateCursorPosition} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
+         <SectionContainer>
+            <Component isHovered={isHovered} />
+         </SectionContainer>
+         <Selector isHovered={isHovered} />
+         <BackgroundCircle {...backgroundCircleProps} />
+      </Container>
+   )
 }
 
 export { InfoSection }
