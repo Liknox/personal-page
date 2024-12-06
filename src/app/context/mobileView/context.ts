@@ -4,10 +4,8 @@ type MobileViewContextType = {
    mobile: boolean
 }
 
-const mobileView = () => innerWidth <= 768
-
 const MobileViewContext = createContext<MobileViewContextType>({
-   mobile: mobileView(),
+   mobile: false,
 })
 
 export { MobileViewContext }
