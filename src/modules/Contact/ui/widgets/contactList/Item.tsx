@@ -87,6 +87,10 @@ const IndexContainer = styled.div`
 	height: var(--font-line-height-xl);
 	max-height: var(--font-line-height-xl);
 	overflow: hidden;
+
+   @media (max-width: 768px) {
+      visibility: hidden;
+	}
 `
 
 const Index = styled(motion.span)`
