@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { type MouseEvent, useMemo, useState } from "react"
 import styled from "styled-components"
 import { Selector } from "./Selector"
+import { useMobileView } from "@app/context/mobileView"
 
 const Container = styled(motion.div)`
 	position: relative;
@@ -65,6 +66,7 @@ const BackgroundCircle = styled(motion.div)`
 
 const InfoSection = () => {
    const { section } = useSelectedSection()
+   const { mobile } = useMobileView()
    const [isHovered, setIsHovered] = useState(false)
    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
 

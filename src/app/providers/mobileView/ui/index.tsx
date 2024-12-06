@@ -1,5 +1,4 @@
 import { MobileViewContext } from "@app/context/mobileView/context"
-import { useState } from "react"
 
 type Props = {
    children: React.ReactNode

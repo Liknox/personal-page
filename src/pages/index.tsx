@@ -1,5 +1,6 @@
 import { routesPaths } from "@app/configs/router"
 import { useInitialAnimation } from "@app/context/initialAnimation"
+import { useMobileView } from "@app/context/mobileView"
 import { ContactList } from "@modules/Contact/ui"
 import { DemoSection } from "@modules/Demo"
 import { InfoSection } from "@modules/Info"
@@ -27,7 +28,7 @@ const TopContainer = styled.div`
 
 	@media (max-width: 768px) {
 		flex-direction: column;
-      height: 65dvh;
+		height: 65dvh;
 	}
 `
 
