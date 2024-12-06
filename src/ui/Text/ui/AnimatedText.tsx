@@ -4,43 +4,43 @@ import { useEffect, useState } from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
 `
 
 const Paragraph = styled.p`
-  position: relative;
-  color: var(--secondary-color);
-  font: var(--font-m);
-  width: 100%;
+	position: relative;
+	color: var(--secondary-color);
+	font: var(--font-m);
+	width: 100%;
 `
 
 const TokenContainer = styled(motion.span)`
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  box-sizing: content-box;
-  height: var(--font-line-height-m);
-  max-height: var(--font-line-height-m);
-  white-space: nowrap;
-  font: var(--font-m);
-  margin-bottom: var(--spacing-s);
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	box-sizing: content-box;
+	height: var(--font-line-height-m);
+	max-height: var(--font-line-height-m);
+	white-space: nowrap;
+	font: var(--font-m);
+	margin-bottom: var(--spacing-s);
 
-  @media (max-width: 768px) {
-    font: var(--font-xs);
-    margin-bottom: 0;
-    height: var(--font-line-height-s);
-    max-height: var(--font-line-height-s);
-  }
+	@media (max-width: 768px) {
+		font: var(--font-xs);
+		margin-bottom: 0;
+		height: var(--font-line-height-s);
+		max-height: var(--font-line-height-s);
+	}
 `
 
 const Token = styled(motion.span)`
-  display: inline-block;
-  white-space: pre;
+	display: inline-block;
+	white-space: pre;
 `
 
 type Props = {
