@@ -89,7 +89,6 @@ const InfoSection = () => {
    }
 
    const Component = useMemo(() => {
-      // console.log(sectionsConfig.find(({ key }) => key === section)?.key)
       return sectionsConfig.find(({ key }) => key === section)?.component || (() => null)
    }, [section])
 

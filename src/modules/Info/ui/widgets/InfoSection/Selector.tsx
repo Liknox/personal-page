@@ -86,7 +86,6 @@ const Selector = ({ isHovered }: Props) => {
 
    const handleSelect = (key: SectionEnum) => {
       setSection(key)
-      console.log(section)
    }
 
    const containerProps = useMemo(
