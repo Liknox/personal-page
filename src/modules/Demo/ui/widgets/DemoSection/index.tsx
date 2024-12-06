@@ -24,8 +24,7 @@ const Container = styled(motion.div)`
 	}
 
 	@media (max-width: 768px) {
-		width: 100%;
-		height: 100dvh;
+      display: none;
 	}
 `
 
