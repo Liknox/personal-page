@@ -77,14 +77,4 @@ const skillsConfig: SkillsConfigType = [
    "https://img.shields.io/badge/Yarn-2C8EBB.svg?style=for-the-badge&logo=Yarn&logoColor=white",
 ]
 
-const preloadImages = () => {
-   // biome-ignore lint/complexity/noForEach: <explanation>
-   skillsConfig.forEach(src => {
-      const img = new Image()
-      img.src = src
-   })
-}
-
-preloadImages()
-
 export { skillsConfig }
