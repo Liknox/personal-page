@@ -1,3 +1,4 @@
+import { type BackgroundCircle as BackgroundCircleProps } from "@app/types/BackgroundCircle"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 
@@ -17,7 +18,7 @@ const BackgroundCircleStyles = styled(motion.div)`
 	pointer-events: none;
 `
 
-const BackgroundCircle = (props: any) => {
+const BackgroundCircle = (props: BackgroundCircleProps) => {
    return <BackgroundCircleStyles {...props} />
 }
 
