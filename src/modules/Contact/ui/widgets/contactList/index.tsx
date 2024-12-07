@@ -13,12 +13,18 @@ const Container = styled.div`
 
 	@media (max-width: 768px) {
 		flex-direction: column;
-      height: 35dvh;
+		height: 35dvh;
 	}
 `
 
 const ContactList = () => {
-   return <Container>{contactListConfig.map(Item)}</Container>
+   return (
+      <Container>
+         {contactListConfig.map((data, i) => (
+            <Item {...data} key={i} />
+         ))}
+      </Container>
+   )
 }
 
 export { ContactList }
