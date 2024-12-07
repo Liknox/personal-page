@@ -163,7 +163,7 @@ const Item = ({ displayName, displayIndex, url, icon: Icon }: Props, index: numb
    const backgroundCircleProps = useMemo(
       () => ({
          style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
-         animate: { opacity: isHovered ? 0.7 : 0 },
+         animate: { opacity: isHovered ? 0.5 : 0 },
          initial: { opacity: 0 },
          transition: {
             type: "spring",
