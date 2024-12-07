@@ -5,6 +5,7 @@ import { type MouseEvent, useMemo, useState } from "react"
 import styled from "styled-components"
 import { Selector } from "./Selector"
 import { useMobileView } from "@app/context/mobileView"
+import { BackgroundCircle } from "@ui/BackgroundCircle"
 
 const Container = styled(motion.div)`
 	position: relative;
@@ -48,22 +49,6 @@ const SectionContainer = styled.div`
 	}
 `
 
-const BackgroundCircle = styled(motion.div)`
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	background: radial-gradient(
-		circle,
-		color-mix(in srgb, var(--primary-color) 40%, transparent 100%),
-		color-mix(in srgb, var(--primary-dark-color) 20%, transparent 100%)
-	);
-	filter: blur(50px);
-	pointer-events: none;
-`
-
 const InfoSection = () => {
    const { section } = useSelectedSection()
    const { mobile } = useMobileView()
@@ -76,7 +61,7 @@ const InfoSection = () => {
    const backgroundCircleProps = useMemo(
       () => ({
          style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
-         animate: { opacity: isHovered ? 1 : 0 },
+         animate: { opacity: isHovered ? 0.7 : 0 },
          initial: { opacity: 0 },
          transition: { duration: 0.1 },
       }),

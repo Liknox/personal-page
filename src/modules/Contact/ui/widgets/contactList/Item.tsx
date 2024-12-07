@@ -1,6 +1,7 @@
 import { ArrowRightOutlined } from "@ant-design/icons"
 import { useInitialAnimation } from "@app/context/initialAnimation"
 import type { ContactItemConfigType as Props } from "@modules/Contact/configs"
+import { BackgroundCircle } from "@ui/BackgroundCircle"
 import { motion } from "framer-motion"
 import { type MouseEvent, useEffect, useMemo, useState } from "react"
 import styled from "styled-components"
@@ -28,22 +29,6 @@ const Container = styled(motion.div)`
 	@media (max-width: 768px) {
 		width: 100%;
 	}
-`
-
-const BackgroundCircle = styled(motion.div)`
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	background: radial-gradient(
-		circle,
-		color-mix(in srgb, var(--primary-color) 80%, transparent 100%),
-		color-mix(in srgb, var(--primary-dark-color) 80%, transparent 100%)
-	);
-	filter: blur(50px);
-	pointer-events: none;
 `
 
 const NameContainer = styled.div`
@@ -178,7 +163,7 @@ const Item = ({ displayName, displayIndex, url, icon: Icon }: Props, index: numb
    const backgroundCircleProps = useMemo(
       () => ({
          style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
-         animate: { opacity: isHovered ? 1 : 0 },
+         animate: { opacity: isHovered ? 0.7 : 0 },
          initial: { opacity: 0 },
          transition: {
             type: "spring",

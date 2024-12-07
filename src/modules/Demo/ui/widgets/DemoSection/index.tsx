@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { type MouseEvent, useMemo, useState } from "react"
 import styled from "styled-components"
 import { Content } from "./Content"
+import { BackgroundCircle } from "@ui/BackgroundCircle"
 
 const Container = styled(motion.div)`
 	position: relative;
@@ -28,22 +29,6 @@ const Container = styled(motion.div)`
 	}
 `
 
-const BackgroundCircle = styled(motion.div)`
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	background: radial-gradient(
-		circle,
-		color-mix(in srgb, var(--primary-color) 80%, transparent 100%),
-		color-mix(in srgb, var(--primary-dark-color) 80%, transparent 100%)
-	);
-	filter: blur(50px);
-	pointer-events: none;
-`
-
 const DemoSection = () => {
    const [isHovered, setIsHovered] = useState(false)
    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
@@ -54,7 +39,7 @@ const DemoSection = () => {
    const backgroundCircleProps = useMemo(
       () => ({
          style: { x: cursorPosition.x - 100, y: cursorPosition.y - 100 },
-         animate: { opacity: isHovered ? 1 : 0 },
+         animate: { opacity: isHovered ? 0.7 : 0 },
          initial: { opacity: 0 },
          transition: { duration: 0.1 },
       }),
