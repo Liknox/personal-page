@@ -17,7 +17,7 @@ type Spring = {
    damping: number
 }
 
-export type BackgroundCircle = {
+export type BackgroundCircleType = {
    style: Resolutions
    animate: Opacity
    initial: Opacity

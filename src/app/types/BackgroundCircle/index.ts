@@ -1,1 +1,1 @@
-export { type BackgroundCircle } from "./types"
+export { type BackgroundCircleType } from "./types"
