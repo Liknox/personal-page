@@ -60,7 +60,7 @@ const TokenContainer = styled(motion.span)`
 `
 
 const Token = styled(motion.span)`
-	color: var(--accent-color);
+	color: var(--primary-color);
 	text-align: center;
 	display: inline-block;
 	white-space: pre;
