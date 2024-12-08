@@ -20,8 +20,8 @@ const Container = styled.div`
 const ContactList = () => {
    return (
       <Container>
-         {contactListConfig.map((data, i) => (
-            <Item {...data} key={i} />
+         {contactListConfig.map(data => (
+            <Item {...data} key={data.displayIndex} />
          ))}
       </Container>
    )

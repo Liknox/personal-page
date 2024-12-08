@@ -1,11 +1,11 @@
+import { useMobileView } from "@app/context/mobileView"
 import { useSelectedSection } from "@app/context/selectedSection"
 import { sectionsConfig } from "@modules/Info/configs/sections"
+import { BackgroundCircle } from "@ui/BackgroundCircle"
 import { motion } from "framer-motion"
 import { type MouseEvent, useMemo, useState } from "react"
 import styled from "styled-components"
 import { Selector } from "./Selector"
-import { useMobileView } from "@app/context/mobileView"
-import { BackgroundCircle } from "@ui/BackgroundCircle"
 
 const Container = styled(motion.div)`
 	position: relative;

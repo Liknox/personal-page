@@ -1,8 +1,8 @@
+import { BackgroundCircle } from "@ui/BackgroundCircle"
 import { motion } from "framer-motion"
 import { type MouseEvent, useMemo, useState } from "react"
 import styled from "styled-components"
 import { Content } from "./Content"
-import { BackgroundCircle } from "@ui/BackgroundCircle"
 
 const Container = styled(motion.div)`
 	position: relative;
