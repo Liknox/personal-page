@@ -8,6 +8,7 @@
 		"build": "tsc && vite build --config ./configs/build/vite.config.ts",
 		"preview": "vite preview --config ./configs/build/vite.config.ts",
 		"lint": "biome check ./src",
+		"lint:apply": "biome check --fix --unsafe ./src",
 		"format": "biome format ./src --write",
 		"prepare": "husky || true"
 	},
