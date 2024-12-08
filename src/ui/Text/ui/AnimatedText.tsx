@@ -81,7 +81,7 @@ const AnimatedText = ({ isHovered, children, delay = 0, bullet = false }: Props)
          ) : null}
          <Paragraph>
             {children.split(" ").map((word, index) => (
-               <TokenContainer key={word}>
+               <TokenContainer key={word + index}>
                   <Token
                      animate={{
                         y: isInitialAnimationOver ? 0 : 40,
