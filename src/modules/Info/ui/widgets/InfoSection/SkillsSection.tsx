@@ -2,7 +2,7 @@ import { useInitialAnimation } from "@app/context/initialAnimation"
 import { skillsConfig } from "@modules/Info/configs/skills"
 import { AnimatedText } from "@ui/Text"
 import { motion } from "framer-motion"
-import { useEffect, useMemo, useState } from "react"
+import { memo, useEffect, useMemo, useState } from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -45,7 +45,7 @@ type Props = {
    isHovered: boolean
 }
 
-const SkillsSection = ({ isHovered }: Props) => {
+const SkillsSection = memo(({ isHovered }: Props) => {
    const { isOver: isInitialAnimationOver } = useInitialAnimation()
    const [initialLoad, setInitialLoad] = useState(true)
 
@@ -75,6 +75,6 @@ const SkillsSection = ({ isHovered }: Props) => {
          ))}
       </Container>
    )
-}
+})
 
 export { SkillsSection }

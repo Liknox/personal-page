@@ -1,6 +1,6 @@
 import { WelcomeHandIcon } from "@ui/Icons"
 import { AnimatedText } from "@ui/Text"
-import { useMemo } from "react"
+import { memo, useMemo } from "react"
 import styled from "styled-components"
 
 const Icon = styled(WelcomeHandIcon)`
@@ -17,7 +17,7 @@ type Props = {
    isHovered: boolean
 }
 
-const WelcomeSection = ({ isHovered }: Props) => {
+const WelcomeSection = memo(({ isHovered }: Props) => {
    const iconProps = useMemo(
       () => ({
          initial: { y: 40, opacity: 0 },
@@ -44,13 +44,13 @@ const WelcomeSection = ({ isHovered }: Props) => {
             Craft perfect business solutions,
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.4}>
-            Burn my eyes out with colorful letters in the IDE
+            Burn my eyes out with colorful letters in the IDE.
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.5}>
             Let's work together!
          </AnimatedText>
       </>
    )
-}
+})
 
 export { WelcomeSection }

@@ -1,10 +1,11 @@
 import { AnimatedText } from "@ui/Text"
+import { memo } from "react"
 
 type Props = {
    isHovered: boolean
 }
 
-const ExperienceSection = ({ isHovered }: Props) => {
+const ExperienceSection = memo(({ isHovered }: Props) => {
    return (
       <>
          <AnimatedText isHovered={isHovered} delay={0} bullet>
@@ -27,6 +28,6 @@ const ExperienceSection = ({ isHovered }: Props) => {
          </AnimatedText>
       </>
    )
-}
+})
 
 export { ExperienceSection }

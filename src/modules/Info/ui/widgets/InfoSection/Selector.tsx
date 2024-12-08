@@ -2,7 +2,7 @@ import { useSelectedSection } from "@app/context/selectedSection"
 import type { SectionEnum } from "@app/context/selectedSection"
 import { sectionsConfig } from "@modules/Info/configs/sections"
 import { motion } from "framer-motion"
-import { useEffect, useMemo, useState } from "react"
+import { memo, useEffect, useMemo, useState } from "react"
 import styled from "styled-components"
 
 const options = sectionsConfig.map(section => {
@@ -80,7 +80,7 @@ type Props = {
    isHovered: boolean
 }
 
-const Selector = ({ isHovered }: Props) => {
+const Selector = memo(({ isHovered }: Props) => {
    const { section, setSection } = useSelectedSection()
    const [initialLoad, setInitialLoad] = useState(true)
 
@@ -129,6 +129,6 @@ const Selector = ({ isHovered }: Props) => {
          </SelectorContainer>
       </Container>
    )
-}
+})
 
 export { Selector }
