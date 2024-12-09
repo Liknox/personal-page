@@ -17,6 +17,10 @@ type LabelProps = {
    selected: boolean
 }
 
+type ContainerProps = {
+   mobile: boolean
+}
+
 const Label = styled(motion.button)<LabelProps>`
 	color: var(--secondary-color);
 	padding: var(--spacing-xs) var(--spacing-m);
@@ -40,7 +44,7 @@ const Label = styled(motion.button)<LabelProps>`
 	}
 `
 
-const Container = styled.div<any>`
+const Container = styled.div<ContainerProps>`
 	position: ${props => (props.mobile ? "absolute" : "static")};
 	bottom: 20px;
 	overflow: hidden;
