@@ -1,5 +1,6 @@
 import { ArrowRightOutlined } from "@ant-design/icons"
 import { useInitialAnimation } from "@app/context/initialAnimation"
+import { useMobileView } from "@app/context/mobileView"
 import type { ContactItemConfigType as Props } from "@modules/Contact/configs"
 import { BackgroundCircle } from "@ui/BackgroundCircle"
 import { motion } from "framer-motion"
@@ -73,8 +74,8 @@ const IndexContainer = styled.div`
 	max-height: var(--font-line-height-xl);
 	overflow: hidden;
 
-   @media (max-width: 768px) {
-      visibility: hidden;
+	@media (max-width: 768px) {
+		visibility: hidden;
 	}
 `
 
@@ -86,6 +87,7 @@ const Index = styled(motion.span)`
 `
 
 const Item = ({ displayName, displayIndex, url, icon: Icon }: Props, index: number) => {
+   const { mobile } = useMobileView()
    const { isOver: isInitialAnimationOver } = useInitialAnimation()
    const [isHovered, setIsHovered] = useState(false)
    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
@@ -126,7 +128,7 @@ const Item = ({ displayName, displayIndex, url, icon: Icon }: Props, index: numb
       () => ({
          animate: {
             y: isInitialAnimationOver ? (isHovered ? -10 : 0) : 40,
-            opacity: isHovered ? 1 : 0.5,
+            opacity: mobile ? 1 : isHovered ? 1 : 0.5,
          },
          initial: {
             y: 40,
@@ -147,7 +149,7 @@ const Item = ({ displayName, displayIndex, url, icon: Icon }: Props, index: numb
          animate: {
             y: isInitialAnimationOver ? (isHovered ? -10 : 0) : 40,
             rotate: isHovered ? -45 : 0,
-            opacity: isHovered ? 1 : 0.5,
+            opacity: mobile ? 1 : isHovered ? 1 : 0.5,
          },
          initial: { y: 40, rotate: 0, opacity: 0 },
          transition: {
