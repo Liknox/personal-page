@@ -41,6 +41,8 @@ const Label = styled(motion.button)<LabelProps>`
 `
 
 const Container = styled.div`
+   position: absolute;
+   bottom: 20px;
 	overflow: hidden;
 	width: 100%;
 	display: flex;
