@@ -1,3 +1,4 @@
+import { useMobileView } from "@app/context/mobileView"
 import { useSelectedSection } from "@app/context/selectedSection"
 import type { SectionEnum } from "@app/context/selectedSection"
 import { sectionsConfig } from "@modules/Info/configs/sections"
@@ -81,6 +82,7 @@ type Props = {
 }
 
 const Selector = memo(({ isHovered }: Props) => {
+   const { mobile } = useMobileView()
    const { section, setSection } = useSelectedSection()
    const [initialLoad, setInitialLoad] = useState(true)
 
@@ -90,7 +92,7 @@ const Selector = memo(({ isHovered }: Props) => {
 
    const containerProps = useMemo(
       () => ({
-         animate: { opacity: isHovered ? 1 : 0.5, y: isHovered ? -10 : 0 },
+         animate: { opacity: mobile ? 1 : isHovered ? 1 : 0.5, y: isHovered ? -10 : 0 },
          initial: { opacity: 0, y: 40 },
          transition: {
             type: "spring",

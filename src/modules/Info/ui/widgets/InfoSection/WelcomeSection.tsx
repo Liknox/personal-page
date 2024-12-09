@@ -1,3 +1,4 @@
+import { useMobileView } from "@app/context/mobileView"
 import { WelcomeHandIcon } from "@ui/Icons"
 import { AnimatedText } from "@ui/Text"
 import { memo, useMemo } from "react"
@@ -18,13 +19,14 @@ type Props = {
 }
 
 const WelcomeSection = memo(({ isHovered }: Props) => {
+   const { mobile } = useMobileView()
    const iconProps = useMemo(
       () => ({
          initial: { y: 40, opacity: 0 },
          animate: {
             y: 0,
-            opacity: isHovered ? 1 : 0.5,
-            rotate: isHovered ? 30 : 0,
+            opacity: mobile ? 1 : isHovered ? 1 : 0.5,
+            rotate: mobile ? 0 : isHovered ? 30 : 0,
          },
          transition: { type: "spring", stiffness: 500, damping: 30 },
       }),

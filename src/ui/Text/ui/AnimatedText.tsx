@@ -1,9 +1,10 @@
 import { useInitialAnimation } from "@app/context/initialAnimation"
+import { useMobileView } from "@app/context/mobileView"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import styled from "styled-components"
 
-const Container = styled.div`
+const Container = styled(motion.div)`
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -52,6 +53,7 @@ type Props = {
 }
 
 const AnimatedText = ({ isHovered, children, delay = 0, bullet = false }: Props) => {
+   const { mobile } = useMobileView()
    const { isOver: isInitialAnimationOver } = useInitialAnimation()
    const [initialLoad, setInitialLoad] = useState(true)
 
@@ -60,13 +62,13 @@ const AnimatedText = ({ isHovered, children, delay = 0, bullet = false }: Props)
    }, [])
 
    return (
-      <Container>
+      <Container initial={{ marginTop: mobile ? 8 : 0 }}>
          {bullet ? (
             <TokenContainer>
                <Token
                   animate={{
                      y: isInitialAnimationOver ? 0 : 40,
-                     opacity: isHovered ? 1 : 0.5,
+                     opacity: mobile ? 1 : isHovered ? 1 : 0.5,
                   }}
                   initial={{ y: 40, opacity: 0 }}
                   transition={{
@@ -85,9 +87,9 @@ const AnimatedText = ({ isHovered, children, delay = 0, bullet = false }: Props)
                   <Token
                      animate={{
                         y: isInitialAnimationOver ? 0 : 40,
-                        opacity: isHovered ? 1 : 0.5,
+                        opacity: mobile ? 1 : isHovered ? 1 : 0.5,
                      }}
-                     initial={{ y: 40, opacity: 0 }}
+                     initial={{ y: 40, opacity: 0, fontSize: mobile ? 13 : "default" }}
                      transition={{
                         type: "spring",
                         stiffness: 500,

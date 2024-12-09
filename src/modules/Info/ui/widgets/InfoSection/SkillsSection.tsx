@@ -1,4 +1,5 @@
 import { useInitialAnimation } from "@app/context/initialAnimation"
+import { useMobileView } from "@app/context/mobileView"
 import { skillsConfig } from "@modules/Info/configs/skills"
 import { AnimatedText } from "@ui/Text"
 import { motion } from "framer-motion"
@@ -46,6 +47,7 @@ type Props = {
 }
 
 const SkillsSection = memo(({ isHovered }: Props) => {
+   const { mobile } = useMobileView()
    const { isOver: isInitialAnimationOver } = useInitialAnimation()
    const [initialLoad, setInitialLoad] = useState(true)
 
@@ -61,7 +63,7 @@ const SkillsSection = memo(({ isHovered }: Props) => {
                   src={src}
                   animate={{
                      y: isInitialAnimationOver ? 0 : 40,
-                     opacity: isHovered ? 1 : 0.5,
+                     opacity: mobile ? 1 : isHovered ? 1 : 0.5,
                   }}
                   initial={{ y: 40, opacity: 0 }}
                   transition={{
