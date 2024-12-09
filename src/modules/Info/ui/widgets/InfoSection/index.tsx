@@ -1,4 +1,3 @@
-import { useMobileView } from "@app/context/mobileView"
 import { useSelectedSection } from "@app/context/selectedSection"
 import { sectionsConfig } from "@modules/Info/configs/sections"
 import { BackgroundCircle } from "@ui/BackgroundCircle"
@@ -51,7 +50,6 @@ const SectionContainer = styled.div`
 
 const InfoSection = () => {
    const { section } = useSelectedSection()
-   const { mobile } = useMobileView()
    const [isHovered, setIsHovered] = useState(false)
    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
 

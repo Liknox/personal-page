@@ -1,9 +1,8 @@
 import { useInitialAnimation } from "@app/context/initialAnimation"
 import { useMobileView } from "@app/context/mobileView"
 import { skillsConfig } from "@modules/Info/configs/skills"
-import { AnimatedText } from "@ui/Text"
 import { motion } from "framer-motion"
-import { memo, useEffect, useMemo, useState } from "react"
+import { memo, useEffect, useState } from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
