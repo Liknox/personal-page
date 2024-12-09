@@ -1,5 +1,5 @@
 import { routesPaths } from "@app/configs/router"
-import { ContactList } from "@modules/Contact/ui"
+import { ContactList } from "@modules/Contact"
 import { DemoSection } from "@modules/Demo"
 import { InfoSection } from "@modules/Info"
 import { createFileRoute } from "@tanstack/react-router"
