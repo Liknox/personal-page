@@ -40,9 +40,9 @@ const Label = styled(motion.button)<LabelProps>`
 	}
 `
 
-const Container = styled.div`
-   position: absolute;
-   bottom: 20px;
+const Container = styled.div<any>`
+	position: ${props => (props.mobile ? "absolute" : "static")};
+	bottom: 20px;
 	overflow: hidden;
 	width: 100%;
 	display: flex;
@@ -111,7 +111,7 @@ const Selector = memo(({ isHovered }: Props) => {
    }, [])
 
    return (
-      <Container>
+      <Container mobile={mobile}>
          <SelectorContainer {...containerProps}>
             {options.map(({ key, label }) => {
                return (
