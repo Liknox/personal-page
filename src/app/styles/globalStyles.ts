@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
 
 	#root {
 		height: 100vh;
+      user-select: none;
 	}
 
 	* {
