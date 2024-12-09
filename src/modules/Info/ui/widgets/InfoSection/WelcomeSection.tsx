@@ -40,10 +40,10 @@ const WelcomeSection = memo(({ isHovered }: Props) => {
             Hi there,
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.2}>
-            I'm Nazar Koval. A Software Engineer,
+            I'm Nazar Koval, a Software Engineer.
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.3}>
-            Craft perfect business solutions,
+            I craft perfect business solutions,
          </AnimatedText>
          <AnimatedText isHovered={isHovered} delay={0.4}>
             Burn my eyes out with colorful letters in the IDE.
