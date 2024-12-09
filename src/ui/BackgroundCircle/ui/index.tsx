@@ -1,3 +1,4 @@
+import { useMobileView } from "@app/context/mobileView"
 import type { BackgroundCircleType } from "@app/types/BackgroundCircle"
 import { motion } from "framer-motion"
 import styled from "styled-components"
@@ -19,6 +20,12 @@ const BackgroundCircleStyles = styled(motion.div)`
 `
 
 const BackgroundCircle = (props: BackgroundCircleType) => {
+   const { mobile } = useMobileView()
+
+   if (mobile) {
+      return null
+   }
+
    return <BackgroundCircleStyles {...props} />
 }
 
