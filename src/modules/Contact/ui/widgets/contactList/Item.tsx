@@ -187,9 +187,11 @@ const Item = ({ displayName, displayIndex, url, icon: Icon }: Props, index: numb
          onHoverEnd={handleHoverEnd}
          onClick={handleOpen}>
          <BackgroundCircle {...backgroundCircleProps} />
-         <IndexContainer>
-            <Index {...indexProps}>{displayIndex}</Index>
-         </IndexContainer>
+         {!mobile && (
+            <IndexContainer>
+               <Index {...indexProps}>{displayIndex}</Index>
+            </IndexContainer>
+         )}
          <NameContainer>
             <Name {...nameProps}>
                <Icon /> {displayName}
