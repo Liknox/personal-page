@@ -1,79 +1,152 @@
-type SkillsConfigType = string[]
+import typescript from "./list/typescript.svg"
+import javascript from "./list/javascript.svg"
+import react from "./list/react.svg"
+import next from "./list/Next.svg"
+import redux from "./list/redux.svg"
+import node from "./list/node.svg"
+import solid from "./list/SolidJS.svg"
+import webAssembly from "./list/WebAssembly.svg"
+import recoil from "./list/Recoil.svg"
+import reduxSaga from "./list/ReduxSaga.svg"
+import mobx from "./list/mobx.svg"
+import zustand from "./list/Zustand.svg"
+import jotai from "./list/Jotai.svg"
+import xstate from "./list/XState.svg"
+import nestjs from "./list/nestjs.svg"
+import expressjs from "./list/express.js.svg"
+import express from "./list/Express.svg"
+import fastify from "./list/Fastify.svg"
+import fastApi from "./list/FastAPI.svg"
+import prisma from "./list/Prisma.svg"
+import nx from "./list/Nx.svg"
+import mongoose from "./list/Mongoose.svg"
+import html from "./list/html5.svg"
+import css from "./list/css3.svg"
+import sass from "./list/SASS.svg"
+import styledComponents from "./list/styled--components.svg"
+import reactQuery from "./list/ReactQuery.svg"
+import axios from "./list/Axios.svg"
+import swr from "./list/SWR.svg"
+import reactRouter from "./list/ReactRouter.svg"
+import tanstackRouter from "./list/TanStackRouter.svg"
+import i18next from "./list/i18next.svg"
+import mui from "./list/MUI.svg"
+import antDesign from "./list/AntDesign.svg"
+import framer from "./list/Framer.svg"
+import tailwind from "./list/tailwindcss.svg"
+import d3 from "./list/D3.js.svg"
+import reactHookForm from "./list/ReactHookForm.svg"
+import zod from "./list/Zod.svg"
+import electron from "./list/Electron.svg"
+import handlebars from "./list/Handlebars.js.svg"
+import threejs from "./list/threejs.svg"
+import chartjs from "./list/chart.js.svg"
+import storybook from "./list/Storybook.svg"
+import cypress from "./list/Cypress.svg"
+import vitest from "./list/Vitest.svg"
+import jest from "./list/jest.svg"
+import testingLibrary from "./list/TestingLibrary.svg"
+import webpack from "./list/webpack.svg"
+import babel from "./list/Babel.svg"
+import vite from "./list/vite.svg"
+import esbuild from "./list/esbuild.svg"
+import swagger from "./list/Swagger.svg"
+import eslint from "./list/ESLint.svg"
+import prettier from "./list/Prettier.svg"
+import biome from "./list/Biome.svg"
+import stylelint from "./list/stylelint.svg"
+import figma from "./list/figma.svg"
+import firebase from "./list/firebase.svg"
+import supabase from "./list/Supabase.svg"
+import mongoDb from "./list/MongoDB.svg"
+import postgreSQL from "./list/PostgreSQL.svg"
+import redis from "./list/Redis.svg"
+import git from "./list/git.svg"
+import github from "./list/github.svg"
+import trello from "./list/Trello.svg"
+import slack from "./list/Slack.svg"
+import jira from "./list/Jira.svg"
+import vercel from "./list/vercel.svg"
+import googleCloud from "./list/GoogleCloud.svg"
+import docker from "./list/docker.svg"
+import npm from "./list/NPM.svg"
+import pnpm from "./list/pnpm.svg"
+import { FunctionComponent, ReactElement, ReactNode, SVGAttributes } from "react"
 
-const skillsConfig: SkillsConfigType = [
-   "https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white",
-   "https://img.shields.io/badge/javascript-%23323330.svg?logo=javascript&logoColor=%23F7DF1E&style=for-the-badge",
-   "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB",
-   "https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white",
-   "https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white",
-   "https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white",
-   "https://img.shields.io/badge/SolidJS-2c4f7c?style=for-the-badge&logo=solid&logoColor=c8c9cb",
-   "https://img.shields.io/badge/WebAssembly-654FF0.svg?style=for-the-badge&logo=WebAssembly&logoColor=white",
-   "https://img.shields.io/badge/Recoil-3578E5.svg?style=for-the-badge&logo=Recoil&logoColor=white",
-   "https://img.shields.io/badge/ReduxSaga-999999.svg?style=for-the-badge&logo=Redux-Saga&logoColor=white",
-   "https://img.shields.io/badge/mobx-%23593d88.svg?style=for-the-badge&logo=mobx&logoColor=white",
-   "https://img.shields.io/badge/Zustand-0EAD69.svg?style=for-the-badge&logo=Zustand&logoColor=white",
-   "https://img.shields.io/badge/Jotai-E8E8E8.svg?style=for-the-badge&logo=jotai.js&logoColor=white",
-   "https://img.shields.io/badge/XState-4B4BFF.svg?style=for-the-badge&logo=XState&logoColor=white",
-   "https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white",
-   "https://img.shields.io/badge/Express-000000.svg?style=for-the-badge&logo=Express&logoColor=white",
-   "https://img.shields.io/badge/Fastify-000000.svg?style=for-the-badge&logo=Fastify&logoColor=white",
-   "https://img.shields.io/badge/FastAPI-009688.svg?style=for-the-badge&logo=FastAPI&logoColor=white",
-   "https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB",
-   "https://img.shields.io/badge/Prisma-2D3748.svg?style=for-the-badge&logo=Prisma&logoColor=white",
-   "https://img.shields.io/badge/Nx-143055.svg?style=for-the-badge&logo=Nx&logoColor=white",
-   "https://img.shields.io/badge/Mongoose-880000.svg?style=for-the-badge&logo=Mongoose&logoColor=white",
-   "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white",
-   "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white",
-   "https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white",
-   "https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white",
-   "https://img.shields.io/badge/React%20Query-FF4154.svg?style=for-the-badge&logo=React-Query&logoColor=white",
-   "https://img.shields.io/badge/Axios-5A29E4.svg?style=for-the-badge&logo=Axios&logoColor=white",
-   "https://img.shields.io/badge/SWR-000000.svg?style=for-the-badge&logo=SWR&logoColor=white",
-   "https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white",
-   "https://img.shields.io/badge/TanStack%20Router-FF4154.svg?style=for-the-badge&logo=React-Query&logoColor=white",
-   "https://img.shields.io/badge/i18next-26A69A.svg?style=for-the-badge&logo=i18next&logoColor=white",
-   "https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white",
-   "https://img.shields.io/badge/-AntDesign-%230170FE?style=for-the-badge&logo=ant-design&logoColor=white",
-   "https://img.shields.io/badge/Framer-0055FF.svg?style=for-the-badge&logo=Framer&logoColor=white",
-   "https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white",
-   "https://img.shields.io/badge/D3.js-F9A03C.svg?style=for-the-badge&logo=d3dotjs&logoColor=white",
-   "https://img.shields.io/badge/React%20Hook%20Form-EC5990.svg?style=for-the-badge&logo=React-Hook-Form&logoColor=white",
-   "https://img.shields.io/badge/Zod-3E67B1.svg?style=for-the-badge&logo=Zod&logoColor=white",
-   "https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white",
-   "https://img.shields.io/badge/Handlebars.js-000000.svg?style=for-the-badge&logo=handlebarsdotjs&logoColor=white",
-   "https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white",
-   "https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white",
-   "https://img.shields.io/badge/Storybook-FF4785.svg?style=for-the-badge&logo=Storybook&logoColor=white",
-   "https://img.shields.io/badge/Cypress-69D3A7.svg?style=for-the-badge&logo=Cypress&logoColor=white",
-   "https://img.shields.io/badge/Vitest-6E9F18.svg?style=for-the-badge&logo=Vitest&logoColor=white",
-   "https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white",
-   "https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white",
-   "https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black",
-   "https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black",
-   "https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white",
-   "https://img.shields.io/badge/esbuild-FFCF00.svg?style=for-the-badge&logo=esbuild&logoColor=black",
-   "https://img.shields.io/badge/Swagger-85EA2D.svg?style=for-the-badge&logo=Swagger&logoColor=black",
-   "https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white",
-   "https://img.shields.io/badge/Prettier-F7B93E.svg?style=for-the-badge&logo=Prettier&logoColor=black",
-   "https://img.shields.io/badge/Biome-60A5FA.svg?style=for-the-badge&logo=Biome&logoColor=white",
-   "https://img.shields.io/badge/stylelint-263238.svg?style=for-the-badge&logo=stylelint&logoColor=white",
-   "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white",
-   "https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase",
-   "https://img.shields.io/badge/Supabase-3FCF8E.svg?style=for-the-badge&logo=Supabase&logoColor=white",
-   "https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white",
-   "https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white",
-   "https://img.shields.io/badge/Redis-DC382D.svg?style=for-the-badge&logo=Redis&logoColor=white",
-   "https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white",
-   "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white",
-   "https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white",
-   "https://img.shields.io/badge/Slack-4A154B.svg?style=for-the-badge&logo=Slack&logoColor=white",
-   "https://img.shields.io/badge/Jira-0052CC.svg?style=for-the-badge&logo=Jira&logoColor=white",
-   "https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white",
-   "https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white",
-   "https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white",
-   "https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white",
-   "https://img.shields.io/badge/pnpm-F69220.svg?style=for-the-badge&logo=pnpm&logoColor=white",
+const skillsConfig: any = [
+   typescript,
+   javascript,
+   react,
+   next,
+   redux,
+   node,
+   solid,
+   webAssembly,
+   recoil,
+   reduxSaga,
+   mobx,
+   zustand,
+   jotai,
+   xstate,
+   nestjs,
+   express,
+   fastify,
+   fastApi,
+   expressjs,
+   prisma,
+   nx,
+   mongoose,
+   html,
+   css,
+   sass,
+   styledComponents,
+   reactQuery,
+   axios,
+   swr,
+   reactRouter,
+   tanstackRouter,
+   i18next,
+   mui,
+   antDesign,
+   framer,
+   tailwind,
+   d3,
+   reactHookForm,
+   zod,
+   electron,
+   handlebars,
+   threejs,
+   chartjs,
+   storybook,
+   cypress,
+   vitest,
+   jest,
+   testingLibrary,
+   webpack,
+   babel,
+   vite,
+   esbuild,
+   swagger,
+   eslint,
+   prettier,
+   biome,
+   stylelint,
+   figma,
+   firebase,
+   supabase,
+   mongoDb,
+   postgreSQL,
+   redis,
+   git,
+   github,
+   trello,
+   slack,
+   jira,
+   vercel,
+   googleCloud,
+   docker,
+   npm,
+   pnpm,
 ]
 
 export { skillsConfig }
