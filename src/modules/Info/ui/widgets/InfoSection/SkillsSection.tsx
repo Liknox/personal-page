@@ -13,7 +13,7 @@ const Container = styled.div`
 	align-items: flex-start;
 	align-content: flex-start;
 	width: 100%;
-	gap: var(--spacing-s);
+	gap: 0.6rem;
 `
 
 const ImgContainer = styled(motion.div)`
@@ -23,21 +23,16 @@ const ImgContainer = styled(motion.div)`
 	box-sizing: content-box;
 	height: var(--font-line-height-l);
 	max-height: var(--font-line-height-l);
-
-	@media (max-width: 768px) {
-		height: var(--font-line-height-s);
-		max-height: var(--font-line-height-s);
-	}
 `
 
 const Icon = styled(motion.img)`
 	border-radius: var(--border-radius-xs);
-	height: var(--font-line-height-l);
+	height: var(--font-line-height-xl);
 	display: inline-block;
 	white-space: pre;
 
 	@media (max-width: 768px) {
-		height: var(--font-line-height-xs);
+		height: var(--font-line-height-s);
 	}
 `
 
