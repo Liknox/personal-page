@@ -1,4 +1,3 @@
-import { FunctionComponent, ReactElement, ReactNode, SVGAttributes } from "react"
 import antDesign from "./list/AntDesign.svg"
 import axios from "./list/Axios.svg"
 import babel from "./list/Babel.svg"
