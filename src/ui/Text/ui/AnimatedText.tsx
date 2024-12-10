@@ -82,24 +82,27 @@ const AnimatedText = ({ isHovered, children, delay = 0, bullet = false }: Props)
             </TokenContainer>
          ) : null}
          <Paragraph>
-            {children.split(" ").map((word, index) => (
-               <TokenContainer key={word + index}>
-                  <Token
-                     animate={{
-                        y: isInitialAnimationOver ? 0 : 40,
-                        opacity: mobile ? 1 : isHovered ? 1 : 0.5,
-                     }}
-                     initial={{ y: 40, opacity: 0, fontSize: mobile ? 13 : "default" }}
-                     transition={{
-                        type: "spring",
-                        stiffness: 500,
-                        damping: 30,
-                        delay: initialLoad ? index * 0.005 + delay : 0,
-                     }}>
-                     {word}{" "}
-                  </Token>
-               </TokenContainer>
-            ))}
+            {children.split(" ").map((word, index) => {
+               const uniqKey = word + index
+               return (
+                  <TokenContainer key={uniqKey}>
+                     <Token
+                        animate={{
+                           y: isInitialAnimationOver ? 0 : 40,
+                           opacity: mobile ? 1 : isHovered ? 1 : 0.5,
+                        }}
+                        initial={{ y: 40, opacity: 0, fontSize: mobile ? 13 : "default" }}
+                        transition={{
+                           type: "spring",
+                           stiffness: 500,
+                           damping: 30,
+                           delay: initialLoad ? index * 0.005 + delay : 0,
+                        }}>
+                        {word}{" "}
+                     </Token>
+                  </TokenContainer>
+               )
+            })}
          </Paragraph>
       </Container>
    )

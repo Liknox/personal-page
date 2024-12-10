@@ -30,7 +30,7 @@ const WelcomeSection = memo(({ isHovered }: Props) => {
          },
          transition: { type: "spring", stiffness: 500, damping: 30 },
       }),
-      [isHovered],
+      [isHovered, mobile],
    )
 
    return (

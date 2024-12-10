@@ -141,7 +141,7 @@ const Item = ({ displayName, displayIndex, url, icon: Icon }: Props, index: numb
             delay: initialLoad ? index * 0.2 + 0.2 : 0,
          },
       }),
-      [isInitialAnimationOver, isHovered, index, initialLoad],
+      [isInitialAnimationOver, isHovered, index, initialLoad, mobile],
    )
 
    const arrowProps = useMemo(
@@ -159,7 +159,7 @@ const Item = ({ displayName, displayIndex, url, icon: Icon }: Props, index: numb
             delay: initialLoad ? index * 0.2 + 0.3 : 0,
          },
       }),
-      [isHovered, isInitialAnimationOver, index, initialLoad],
+      [isHovered, isInitialAnimationOver, index, initialLoad, mobile],
    )
 
    const backgroundCircleProps = useMemo(

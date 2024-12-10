@@ -1,5 +1,5 @@
 import { SectionEnum } from "@app/context/selectedSection"
-import { lazy, Suspense, type FC } from "react"
+import { type FC, Suspense, lazy } from "react"
 import { ExperienceSection } from "../ui/widgets/InfoSection/ExperienceSection"
 import { WelcomeSection } from "../ui/widgets/InfoSection/WelcomeSection"
 

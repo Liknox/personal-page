@@ -107,7 +107,7 @@ const Selector = memo(({ isHovered }: Props) => {
             delay: initialLoad ? 0.6 : 0,
          },
       }),
-      [isHovered, initialLoad],
+      [isHovered, initialLoad, mobile],
    )
 
    useEffect(() => {
