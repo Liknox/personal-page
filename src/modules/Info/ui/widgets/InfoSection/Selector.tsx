@@ -17,10 +17,6 @@ type LabelProps = {
    selected: boolean
 }
 
-type ContainerProps = {
-   mobile: boolean
-}
-
 const Label = styled(motion.button)<LabelProps>`
 	color: var(--secondary-color);
 	padding: var(--spacing-xs) var(--spacing-m);
@@ -44,8 +40,8 @@ const Label = styled(motion.button)<LabelProps>`
 	}
 `
 
-const Container = styled.div<ContainerProps>`
-	position: ${props => (props.mobile ? "absolute" : "static")};
+const Container = styled.div`
+	position: static;
 	bottom: 20px;
 	overflow: hidden;
 	width: 100%;
@@ -57,6 +53,9 @@ const Container = styled.div<ContainerProps>`
 	align-content: center;
 	max-height: 60px;
 	height: 60px;
+   @media (max-width: 768px) {
+		position: absolute;
+	}
 `
 
 const SelectorContainer = styled(motion.div)`
@@ -115,7 +114,7 @@ const Selector = memo(({ isHovered }: Props) => {
    }, [])
 
    return (
-      <Container mobile={mobile}>
+      <Container>
          <SelectorContainer {...containerProps}>
             {options.map(({ key, label }) => {
                return (
