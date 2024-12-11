@@ -13,7 +13,10 @@ const Container = styled.div`
 	align-items: flex-start;
 	align-content: flex-start;
 	width: 100%;
-	gap: 0.6rem;
+	gap: var(--spacing-s);
+	@media (max-width: 768px) {
+		gap: 0.6rem;
+	}
 `
 
 const ImgContainer = styled(motion.div)`
@@ -27,7 +30,7 @@ const ImgContainer = styled(motion.div)`
 
 const Icon = styled(motion.img)`
 	border-radius: var(--border-radius-xs);
-	height: var(--font-line-height-xl);
+	height: var(--font-line-height-l);
 	display: inline-block;
 	white-space: pre;
 
