@@ -1,6 +1,14 @@
 import styled from "styled-components"
 
-const Loader = styled.div`
+const LoaderWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; 
+   margin: auto;
+`
+
+const LoaderSpin = styled.div`
 	border-radius: 50%;
 	border-top: 2px solid var(--primary-color);
 	width: 20px;
@@ -17,5 +25,12 @@ const Loader = styled.div`
 		}
 	}
 `
+function Loader() {
+   return (
+      <LoaderWrapper>
+         <LoaderSpin />
+      </LoaderWrapper>
+   )
+}
 
 export { Loader }
