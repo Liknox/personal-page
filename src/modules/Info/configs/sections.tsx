@@ -2,6 +2,7 @@ import { SectionEnum } from "@app/context/selectedSection"
 import { type FC, Suspense, lazy } from "react"
 import { ExperienceSection } from "../ui/widgets/InfoSection/ExperienceSection"
 import { WelcomeSection } from "../ui/widgets/InfoSection/WelcomeSection"
+import { Loader } from "../../../ui/Loader/ui"
 
 const LazySkillsSection = lazy(() =>
    import("../ui/widgets/InfoSection/SkillsSection").then(module => ({
@@ -30,7 +31,7 @@ const sectionsConfig: SectionsConfigType = [
       key: SectionEnum.technicalSkills,
       displayName: "Skills",
       component: props => (
-         <Suspense fallback={<div>Loading...</div>}>
+         <Suspense fallback={<Loader />}>
             <LazySkillsSection {...props} />
          </Suspense>
       ),
