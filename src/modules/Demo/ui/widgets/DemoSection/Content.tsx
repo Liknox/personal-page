@@ -1,7 +1,7 @@
 import { useInitialAnimation } from "@app/context/initialAnimation"
 import { backgroundText } from "@modules/Demo/configs/backgroundText"
 import { motion } from "framer-motion"
-import { useEffect, useMemo, useState } from "react"
+import { memo, useEffect, useMemo, useState } from "react"
 import styled from "styled-components"
 
 const Name = styled.h1`
@@ -82,7 +82,7 @@ type Props = {
    isHovered: boolean
 }
 
-const Content = ({ isHovered }: Props) => {
+const Content = memo(({ isHovered }: Props) => {
    const { isOver: isInitialAnimationOver } = useInitialAnimation()
    const [initialLoad, setInitialLoad] = useState(true)
 
@@ -151,6 +151,6 @@ const Content = ({ isHovered }: Props) => {
          </TextContainer>
       </>
    )
-}
+})
 
 export { Content }
