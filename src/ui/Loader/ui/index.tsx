@@ -10,11 +10,11 @@ const LoaderWrapper = styled.div`
 
 const LoaderSpin = styled.div`
 	border-radius: 50%;
-	border-top: 2px solid var(--primary-color);
-	width: 20px;
-	height: 20px;
-	-webkit-animation: spin 1s ease infinite;
-	animation: spin 1s ease infinite;
+	border-top: 3px solid var(--primary-color);
+	width: 80px;
+	height: 80px;
+	-webkit-animation: spin 0.8s infinite;
+	animation: spin 0.8s infinite;
 
 	@keyframes spin {
 		0% {
