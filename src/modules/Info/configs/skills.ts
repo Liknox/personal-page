@@ -7,7 +7,6 @@ import d3 from "./list/D3.js.svg"
 import eslint from "./list/ESLint.svg"
 import electron from "./list/Electron.svg"
 import express from "./list/Express.svg"
-import fastApi from "./list/FastAPI.svg"
 import fastify from "./list/Fastify.svg"
 import framer from "./list/Framer.svg"
 import googleCloud from "./list/GoogleCloud.svg"
@@ -71,8 +70,12 @@ import typescript from "./list/typescript.svg"
 import vercel from "./list/vercel.svg"
 import vite from "./list/vite.svg"
 import webpack from "./list/webpack.svg"
+import mySQL from "./list/mySQL.svg"
+import Yarn from "./list/Yarn.svg"
+
+// "https://img.shields.io/badge/Mongoose-880000.svg?style=for-the-badge&logo=Mongoose&logoColor=white",
 
 // biome-ignore format: the array should not be formatted
-const skillsConfig: any = [ typescript, javascript, react, next, redux, node, solid, webAssembly, recoil, reduxSaga, mobx, zustand, jotai, xstate, nestjs, express, fastify, fastApi, expressjs, prisma, nx, mongoose, html, css, sass, styledComponents, reactQuery, axios, swr, reactRouter, tanstackRouter, i18next, mui, antDesign, framer, tailwind, d3, reactHookForm, zod, electron, handlebars, threejs, chartjs, storybook, cypress, vitest, jest, testingLibrary, webpack, babel, vite, esbuild, swagger, eslint, prettier, biome, stylelint, figma, firebase, supabase, mongoDb, postgreSQL, redis, git, github, trello, slack, jira, vercel, googleCloud, docker, npm, pnpm, ]
+const skillsConfig: any = [ typescript, javascript, react, next, redux, node, solid, webAssembly, recoil, reduxSaga, mobx, zustand, jotai, xstate, nestjs, express, fastify, docker, expressjs, prisma, nx, mongoose, html, css, sass, styledComponents, reactQuery, axios, swr, reactRouter, tanstackRouter, i18next, mui, antDesign, framer, tailwind, d3, reactHookForm, zod, electron, handlebars, threejs, chartjs, storybook, cypress, vitest, jest, testingLibrary, webpack, babel, vite, esbuild, swagger, eslint, prettier, biome, stylelint, figma, firebase, supabase, mongoDb, postgreSQL, redis, mySQL, github, trello, slack, jira, vercel, googleCloud, git, npm, pnpm, Yarn ]
 
 export { skillsConfig }

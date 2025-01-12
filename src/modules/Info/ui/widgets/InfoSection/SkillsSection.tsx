@@ -15,7 +15,7 @@ const Container = styled.div`
 	width: 100%;
 	gap: var(--spacing-s);
 	@media (max-width: 768px) {
-		gap: 0.6rem;
+		gap: 0.4rem;
 	}
 `
 
