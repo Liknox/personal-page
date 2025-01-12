@@ -70,7 +70,7 @@ import typescript from "./list/typescript.svg"
 import vercel from "./list/vercel.svg"
 import vite from "./list/vite.svg"
 import webpack from "./list/webpack.svg"
-import mySQL from "./list/mySQL.svg"
+import mySQL from "./list/MySQL.svg"
 import Yarn from "./list/Yarn.svg"
 
 // "https://img.shields.io/badge/Mongoose-880000.svg?style=for-the-badge&logo=Mongoose&logoColor=white",
