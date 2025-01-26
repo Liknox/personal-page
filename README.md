@@ -15,6 +15,8 @@
 -  **Deployment**: `vercel`
 -  **Architecture**: `feature-sliced`, `module-based-approach`
 
+<br />
+
 <div align="center">
 <img title="react" alt="react" height=48 src="https://cdn.auth0.com/blog/react-js/react.png"/>
 <img title="typescript" alt="typescript" height=48 src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png"/>
