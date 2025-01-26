@@ -1,4 +1,4 @@
-# [Nazar Koval's Personal Page](https://dev-sharead.netlify.app)
+# [Nazar Koval's Personal Page](https://koval-nazar-personal-page.vercel.app/)
 
 <img alt="favicon" src="https://raw.githubusercontent.com/Liknox/personal-page/refs/heads/master/public/favicon.ico" height=40 align="right" />
 
