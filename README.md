@@ -1,6 +1,6 @@
 # [Nazar Koval's Personal Page](https://koval-nazar-personal-page.vercel.app/)
 
-<img alt="favicon" src="https://raw.githubusercontent.com/Liknox/personal-page/refs/heads/master/public/favicon.ico" height=40 align="right" />
+<img alt="favicon" src="public/favicon.ico" height=40 align="right" />
 
 -  [Architecture design guidelines](https://feature-sliced.design/)
 -  [Contributing guide](CONTRIBUTING.md)
