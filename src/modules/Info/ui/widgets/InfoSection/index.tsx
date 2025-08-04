@@ -29,6 +29,10 @@ const Container = styled(motion.div)`
 		width: 100%;
 		height: 100dvh;
 	}
+   
+	@media (max-width: 500px) {
+      padding: 5px 0 30px 10px;
+	}
 `
 
 const SectionContainer = styled.div`

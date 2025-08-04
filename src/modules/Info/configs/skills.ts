@@ -17,7 +17,6 @@ import mongoDb from "./list/MongoDB.svg"
 import mongoose from "./list/Mongoose.svg"
 import npm from "./list/NPM.svg"
 import next from "./list/Next.svg"
-import nx from "./list/Nx.svg"
 import postgreSQL from "./list/PostgreSQL.svg"
 import prettier from "./list/Prettier.svg"
 import prisma from "./list/Prisma.svg"
@@ -46,7 +45,6 @@ import esbuild from "./list/esbuild.svg"
 import figma from "./list/figma.svg"
 import firebase from "./list/firebase.svg"
 import git from "./list/git.svg"
-import github from "./list/github.svg"
 import html from "./list/html5.svg"
 import i18next from "./list/i18next.svg"
 import javascript from "./list/javascript.svg"
@@ -58,7 +56,6 @@ import pnpm from "./list/pnpm.svg"
 import react from "./list/react.svg"
 import redux from "./list/redux.svg"
 import styledComponents from "./list/styled--components.svg"
-import stylelint from "./list/stylelint.svg"
 import tailwind from "./list/tailwindcss.svg"
 import threejs from "./list/threejs.svg"
 import typescript from "./list/typescript.svg"
@@ -94,6 +91,6 @@ import Vue from "./list/Vue.svg"
 // "https://img.shields.io/badge/Mongoose-880000.svg?style=for-the-badge&logo=Mongoose&logoColor=white",
 
 // biome-ignore format: the array should not be formatted
-const skillsConfig: any = [ typescript, javascript, react, next, redux, node, webAssembly, reduxSaga, mobx, zustand, jotai, xstate, nestjs, express, fastify, docker, prisma, nx, mongoose, html, css, sass, styledComponents, reactQuery, SonarQube, axios, swr, reactRouter, tanstackRouter, i18next, TypeORM, mui, Aws, antDesign, Grafana, framer, tailwind, d3, reactHookForm, zod, Elasticsearch, electron, threejs, chartjs, Jenkins, storybook, cypress, Husky, vitest, jest, testingLibrary, Gsap, webpack, Playwright, babel, Kubernetes, vite, esbuild, swagger, eslint, Turborepo, Nuxt, GraphQL, prettier, biome, stylelint, figma, firebase, mongoDb, ApolloClient, postgreSQL, redis, Vue, Formik, mySQL, Yup, Prometheus, RabbitMQ, github, Kafka, Sentry, Mocha, trello, Nginx, slack, jira, vercel, googleCloud, git, npm, pnpm, Yarn ]
+const skillsConfig: any = [ typescript, javascript, react, next, node, express, nestjs, fastify, redux, reduxSaga, mobx, zustand, jotai, xstate, Vue, Nuxt, reactQuery, axios, swr, tanstackRouter, reactRouter, reactHookForm, Formik, i18next, mui, tailwind, antDesign, styledComponents, Gsap, framer, Yup, zod, html, css, sass, electron, chartjs, threejs, d3, prisma, mongoose, TypeORM, webAssembly, Kubernetes, docker, SonarQube, Grafana, Elasticsearch, Jenkins, storybook, cypress, Husky, vitest, jest, Playwright, Mocha, testingLibrary, babel, webpack, vite, esbuild, swagger, Turborepo, GraphQL, biome, figma, ApolloClient, firebase, mongoDb, postgreSQL, mySQL, redis, RabbitMQ, Kafka, Sentry, Prometheus, Nginx, trello, slack, jira, vercel, googleCloud, Aws, eslint, prettier, git, npm, pnpm, Yarn, ]
 
 export { skillsConfig }
